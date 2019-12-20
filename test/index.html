@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>jb-chat-plugin</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+</head>
+
+<body>
+  <div id="app">
+    <div id="chat-plugin-area">
+      <div id="chat-plugin"></div>
+    </div>
+  </div>
+  <script src="../dist/JBChatPlugin.js"></script>
+  <script>
+    var container = document.getElementById('chat-plugin');
+    var config = {}
+    config.serverUrl = {
+      "url": "http://192.168.100.132:9987",
+      "path": "",
+      "query": {}
+    };
+    config.userData = {
+      userid: "leolu0001",
+      userName: "Leo0001"
+    }
+    JBChatPlugin.run(container, config);
+  </script>
+</body>
+
+</html>
+
+<style>
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #app {
+    width: 100%;
+    height: 3413px;
+    overflow: hidden;
+    background-image: url('./2019_december_1440x2560_03.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+
+  #chat-plugin-area {
+    width: 100px;
+    height: 500px;
+  }
+  /** 改左邊如下 */
+  /*
+  #chat-sys-box .main-box .chat-menu-box {
+    top: 25vh;
+    bottom: auto;
+    left: 0;
+    right: auto;
+  }
+  #chat-sys-box .main-box .chat-menu-box .menu-btn .chat-select-box {
+    top: 0;
+    bottom: auto;
+    left: calc(100% + 20px + 30px);
+    right: auto;
+  }
+   */
+</style>

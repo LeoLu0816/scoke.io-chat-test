@@ -1,0 +1,236 @@
+$bgColor: #f1f1f1
+$white: #ffffff
+$ChatBoxColor: #d3d3d3
+$titleColor: linear-gradient(to right, #959595 0%,#4f4f4f 53%,#4f4f4f 53%,#3f3f3f 64%,#3f3f3f 71%,#2b2b2b 85%,#1b1b1b 100%)
+$chatColor: #e6e6e6
+$btnColor: #f1ebeb
+
+
+@mixin layer($w,$h:$w)
+  width: $w
+  height: $h
+@mixin positionBox($t,$b,$l,$r)
+  top: $t
+  bottom: $b
+  left: $l
+  right: $r
+  margin: auto
+@mixin buttonBasic
+  background: none
+  border: none
+*
+  box-sizing: border-box
+body,html,p,span,a,ul,br,button,input
+  margin: 0
+  padding: 0
+  outline: none
+body
+  background-color: $bgColor
+#chat-sys-box
+  +layer(100%)
+  background-color: 
+  .main-box
+    .chat-menu-box
+      +layer(10vh,8vh)
+      +positionBox(25vh,auto,auto,0)
+      position: fixed
+      background-color: $ChatBoxColor
+      border-radius: 1vh
+      padding: 8px
+      .menu-btn
+        position: relative
+        height: 100%
+        &>button
+          +layer(100%,100%)
+          +buttonBasic
+          font-size: .95rem
+          font-weight: bold
+          span:last-child
+            font-size: .7rem
+            font-weight: 100
+        .chat-select-box
+          +layer(30vh,35vh)
+          +positionBox(0,auto,auto,calc(100% + 20px + 30px))
+          position: absolute
+          background-color: $white
+          border-radius: 1vh
+          padding: 2vh 2.2vh
+          display: flex
+          flex-direction: column
+          .select-btn
+            +layer(100%, calc(100% / 6))
+            +buttonBasic
+            background-color: $btnColor
+            display: flex
+            align-items: center
+            margin: 5px 0
+            padding: 0 10px
+            border-radius: 5px
+            .iconfont
+              font-size: 1.7rem
+              margin-right: 5px
+  .chat-customer-service,
+  .chat-upper-layer
+    .chat-box
+      +layer(36vh,58vh)
+      border-radius: 10px
+      background-color: $white
+      overflow: hidden
+      .title
+        +layer(100%,40px)
+        background: $titleColor
+        color: $white
+        padding: 0 10px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        cursor: move
+        button
+          +buttonBasic
+          i.iconfont
+            color: $white
+            font-size: 1.4rem
+      .msg-list
+        +layer(100%,calc(100% - 21% - 40px))
+        border-bottom: 1px solid #e1e1e1
+        overflow: hidden
+        .inner-list
+          display: flex
+          flex-direction: column
+          padding: 10px
+          .msg-item
+            margin-right: auto
+            &.is-my
+              margin-right: 0
+              margin-left: auto
+            .img
+              width: 12rem
+              margin: 5px 0 0
+              img
+                max-height: 100%
+                max-width: 100%
+                border: 1px solid #999999
+            .from,
+            .time
+              font-size: .8rem
+            .msg
+              width: 100%
+              background-color: $chatColor
+              padding: 10px
+              border-radius: 4px
+      .input
+        +layer(100%,21%)
+        padding: 6px
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: center
+        position: relative
+        .sendMultimedia
+          +layer(100%,30%)
+          margin-bottom: 2%
+          display: flex
+          align-items: center
+          justify-content: flex-start
+          button
+            +buttonBasic
+            margin: 0 5px
+            i.iconfont
+              font-size: 1.5rem
+              &:before
+                background: $titleColor
+                -webkit-background-clip: text
+                -webkit-text-fill-color: transparent
+        .sengImg
+          height: 60%
+          position: absolute
+          +positionBox(-65%,auto,0,auto)
+          background-color: #3a3a3a
+          border-radius: 2px
+          margin: 0 4px
+          opacity: .7
+          .inner_img
+            height: 100%
+            position: relative
+          img
+            height: 100%
+            padding: 6px
+          .icon
+            +layer(1rem)
+            position: absolute
+            background-color: #000000
+            border-radius: .7rem
+            top: -6px
+            right: -6px
+            text-align: center
+            line-height: 1rem
+            i
+              font-size: .8rem
+              color: #ffffff
+        .sendMsg
+          +layer(100%,68%)
+          border-radius: 10px
+          overflow: hidden
+          display: flex
+          justify-content: center
+          input
+            +layer(74%,100%)
+            border: none
+            background-color: #ebebeb
+            padding: 10px
+          button
+            +layer(26%,100%)
+            border: none
+            color: $white
+            background: $titleColor
+            font-size: 1rem
+            span
+              line-height: 1.4rem
+              &:last-child
+                font-size: .8rem
+  .Mask
+    +layer(100%)
+    +positionBox(0,0,0,0)
+    position: fixed
+    background-color: rgba(#000,.6)
+    z-index: 998
+  .bigImage
+    +layer(85%)
+    +positionBox(0,0,0,0)
+    position: fixed
+    display: flex
+    align-items: center
+    justify-content: center
+    z-index: 999
+    .imgBox
+      background-color: rgba(#b0b0b0,.8)
+      padding: 15px
+      position: relative
+      border-radius: 5px
+      img
+        max-width: 80vw
+        max-height: 80vh
+      button
+        +layer(2.2rem)
+        +buttonBasic
+        position: absolute
+        right: -1rem
+        top: -1rem
+        background-color: #efefef
+        opacity: .85
+        text-align: center
+        line-height: 2.2rem
+        border-radius: 1.1rem
+        i
+          font-size: 2rem
+  .bigImg-enter-active,
+  .bigImg-leave-active
+    transition: transform .5s
+  .bigImg-enter,
+  .bigImg-leave-to
+    transform: scale(.01)
+
+
+
+
+

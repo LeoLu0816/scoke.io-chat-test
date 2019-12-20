@@ -1,0 +1,15 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false,
+        "useBuiltIns": "usage",
+        "debug": false,
+        "targets": {
+          "browsers": ["IE 11"]
+        }
+      }
+    ]
+  ]
+}

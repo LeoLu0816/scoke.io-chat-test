@@ -1,0 +1,65 @@
+{
+  "id": "1560373",
+  "name": "chatIcon",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "670735",
+      "name": "close",
+      "font_class": "close1",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "9869960",
+      "name": "image",
+      "font_class": "image",
+      "unicode": "e6fe",
+      "unicode_decimal": 59134
+    },
+    {
+      "icon_id": "9915794",
+      "name": "image",
+      "font_class": "image1",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "12340288",
+      "name": "mail",
+      "font_class": "mail",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "12341157",
+      "name": "customer",
+      "font_class": "customer",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "12341507",
+      "name": "upper",
+      "font_class": "upper",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "12342218",
+      "name": "smile-o",
+      "font_class": "smile",
+      "unicode": "ec08",
+      "unicode_decimal": 60424
+    },
+    {
+      "icon_id": "12342716",
+      "name": "close-c",
+      "font_class": "close",
+      "unicode": "ec09",
+      "unicode_decimal": 60425
+    }
+  ]
+}
